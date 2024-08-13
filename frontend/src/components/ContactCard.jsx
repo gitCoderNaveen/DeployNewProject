@@ -1,7 +1,5 @@
 import React from 'react';
 import './Css/ContactCard.css'
-import github from '../assets/Images/github.png'
-import linkedin from '../assets/Images/linkedIn.png'
 
 const ContactCard = () => {
     return (
