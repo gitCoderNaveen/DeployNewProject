@@ -6,12 +6,7 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(cors({
-    origin:[""],
-    methods:["GET","POST"],
-    credentials:true
-}
-))
+app.use(cors())
 
 mongoose.connect('mongodb+srv://deployUser:Welcome123@newcluster.8zvx9.mongodb.net/ProductDirectory?retryWrites=true&w=majority&appName=NewCluster')
 
