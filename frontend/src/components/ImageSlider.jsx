@@ -47,11 +47,10 @@ const ImageSlider = () => {
     <div className="slider-container">
       <div
         className="slider"
-        style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: 'transform 0.5s ease-in-out' }}
-      >
+        style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: 'transform 0.5s ease-in-out' }}>
         {images.map((image, index) => (
           <div className="slide" key={index}>
-            <img src={image} alt={`Slide ${index}`} />
+            <img src={image} alt={`Slide ${index}`}/>
           </div>
         ))}
       </div>
@@ -66,5 +65,4 @@ const ImageSlider = () => {
     </div>
   );
 };
-
 export default ImageSlider;

@@ -29,7 +29,8 @@
 
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from 'D:/Projects/IndustrialProject/frontend/src/assets/Images/logo.png'
+import logo from 'D:/Projects/VercelDeployProject/frontend/src/assets/Images/logo.png'
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -43,7 +44,7 @@ const NavBar = () => {
     e.preventDefault()
     if (product !== ' ')
       try {
-        const response = await fetch(`http://localhost:7002/datas/getFirmDetails?product=${product}`);
+        const response = await fetch(`https://deployit-z30o.onrender.com/datas/getFirmDetails?product=${product}`);
         const data = await response.json();
         if (response.ok) {
           setFirmDetails(data);
@@ -74,10 +75,10 @@ const NavBar = () => {
           <img src={logo} alt="my-logo" width={'150px'} />
         </div>
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/about'>About</NavLink>
+          <NavLink to="/service">Services</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
           <form className="nav-search">
             <input
               type="text"

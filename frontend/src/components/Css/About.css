@@ -1,0 +1,53 @@
+.about-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .about-text h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  .about-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-text h2 {
+      font-size: 1.2em;
+    }
+  
+    .about-text p {
+      font-size: 0.9em;
+    }
+  }
+  

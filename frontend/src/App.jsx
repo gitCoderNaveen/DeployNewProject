@@ -1,19 +1,24 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home'
-import ImageSlider from './components/ImageSlider'
-import ImageGrid from './components/ImageGrid'
-import ContentDiv from './components/ContentDiv'
+
 import Footer from './components/Footer'
+import {Routes, Route} from 'react-router-dom'
+import About from './components/About'
+import Service from './components/Service'
+import ContactCard from './components/ContactCard'
 
 
 const App = () => {
   return (
     <div className='app'>
       <Navbar/>
-      <ImageSlider/>
-      <ImageGrid/>
-      <ContentDiv/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/service' element={<Service/>}/>
+        <Route path='/contact' element={<ContactCard/>}/>
+      </Routes>      
     </div>
   )
 }
