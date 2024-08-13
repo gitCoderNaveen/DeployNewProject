@@ -6,7 +6,10 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+    origin:"https://66bb992da9b1db8360f8c7b9--superb-hamster-163744.netlify.app"
+}
+))
 
 mongoose.connect('mongodb+srv://deployUser:Welcome123@newcluster.8zvx9.mongodb.net/ProductDirectory?retryWrites=true&w=majority&appName=NewCluster')
 
